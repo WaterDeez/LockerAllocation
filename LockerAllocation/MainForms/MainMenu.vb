@@ -36,6 +36,5 @@
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         NewLock.Show()
-        Me.Close()
     End Sub
 End Class
