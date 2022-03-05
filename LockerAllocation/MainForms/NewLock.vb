@@ -11,8 +11,7 @@
 
         ' LOOP ROW & ADD TO COMBOBOX
         For Each r As DataRow In Sql.DBDT.Rows
-            'ComboBox4.Items.Add(r("Surname").ToString & ", " & r("PreferredNames").ToString)
-            ComboBox4.Items.Add(r("Surname").ToString)
+            ComboBox4.Items.Add(r("Surname").ToString & ", " & r("PreferredNames").ToString)
         Next
     End Sub
     Private Sub InsertLock()
