@@ -32,9 +32,19 @@
 
     Private Sub MainMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         UsernameLbl.Text = username
+        If adminAccount = True Then
+            AdminLbl.Visible = True
+        Else
+            AdminLbl.Visible = False
+        End If
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         NewLock.Show()
+    End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        AdditionalMenu.Show()
+        Me.Close()
     End Sub
 End Class

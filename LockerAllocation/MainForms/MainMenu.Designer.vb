@@ -47,7 +47,7 @@ Partial Class MainMenu
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.InitialImage = CType(resources.GetObject("PictureBox1.InitialImage"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(16, 17)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(70, 77)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -59,7 +59,7 @@ Partial Class MainMenu
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
         Me.PictureBox2.InitialImage = CType(resources.GetObject("PictureBox2.InitialImage"), System.Drawing.Image)
         Me.PictureBox2.Location = New System.Drawing.Point(507, 17)
-        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(70, 77)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -69,7 +69,7 @@ Partial Class MainMenu
         'Button2
         '
         Me.Button2.Location = New System.Drawing.Point(155, 115)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(2)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(138, 67)
         Me.Button2.TabIndex = 4
@@ -79,7 +79,7 @@ Partial Class MainMenu
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(310, 115)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(138, 67)
         Me.Button1.TabIndex = 5
@@ -89,7 +89,7 @@ Partial Class MainMenu
         'Button3
         '
         Me.Button3.Location = New System.Drawing.Point(310, 196)
-        Me.Button3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(2)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(138, 67)
         Me.Button3.TabIndex = 7
@@ -99,7 +99,7 @@ Partial Class MainMenu
         'Button4
         '
         Me.Button4.Location = New System.Drawing.Point(155, 196)
-        Me.Button4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(2)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(138, 67)
         Me.Button4.TabIndex = 6
@@ -109,7 +109,7 @@ Partial Class MainMenu
         'Button7
         '
         Me.Button7.Location = New System.Drawing.Point(310, 275)
-        Me.Button7.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button7.Margin = New System.Windows.Forms.Padding(2)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(138, 67)
         Me.Button7.TabIndex = 9
@@ -119,7 +119,7 @@ Partial Class MainMenu
         'Button8
         '
         Me.Button8.Location = New System.Drawing.Point(155, 275)
-        Me.Button8.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button8.Margin = New System.Windows.Forms.Padding(2)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(138, 67)
         Me.Button8.TabIndex = 8
@@ -141,7 +141,7 @@ Partial Class MainMenu
         '
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
         Me.PictureBox3.Location = New System.Drawing.Point(31, 142)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(75, 79)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -166,11 +166,12 @@ Partial Class MainMenu
         Me.UsernameLbl.Name = "UsernameLbl"
         Me.UsernameLbl.Size = New System.Drawing.Size(0, 13)
         Me.UsernameLbl.TabIndex = 14
+        Me.UsernameLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Button5
         '
         Me.Button5.Location = New System.Drawing.Point(31, 275)
-        Me.Button5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(2)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(75, 25)
         Me.Button5.TabIndex = 25
@@ -207,7 +208,7 @@ Partial Class MainMenu
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "MainMenu"
         Me.Text = "MainMenu"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

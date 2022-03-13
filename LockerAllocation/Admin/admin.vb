@@ -10,6 +10,7 @@
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
         MainMenu.Show()
         MainMenu.StartPosition = FormStartPosition.CenterParent
+        MainMenu.AdminLbl.Visible = True
         Me.Close()
     End Sub
 
@@ -35,5 +36,9 @@
         username = ""
         login.Show()
         Me.Close()
+    End Sub
+
+    Private Sub admin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Label3.Text = username
     End Sub
 End Class

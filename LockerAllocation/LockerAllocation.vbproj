@@ -103,6 +103,20 @@
     <Compile Include="Admin\CreateUser.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AdditionalForms\AdditionalMenu.Designer.vb">
+      <DependentUpon>AdditionalMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdditionalForms\AdditionalMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extras\DatabaseChecks.vb" />
+    <Compile Include="AdditionalForms\LockReturn.Designer.vb">
+      <DependentUpon>LockReturn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdditionalForms\LockReturn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Extras\Selections.vb" />
     <Compile Include="MainForms\login.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +134,12 @@
       <DependentUpon>NewLock.vb</DependentUpon>
     </Compile>
     <Compile Include="MainForms\NewLock.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\NewStudent.Designer.vb">
+      <DependentUpon>NewStudent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\NewStudent.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -165,6 +185,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AdditionalForms\AdditionalMenu.resx">
+      <DependentUpon>AdditionalMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdditionalForms\LockReturn.resx">
+      <DependentUpon>LockReturn.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\admin.resx">
       <DependentUpon>admin.vb</DependentUpon>
     </EmbeddedResource>
