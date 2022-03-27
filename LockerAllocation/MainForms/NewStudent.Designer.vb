@@ -24,21 +24,20 @@ Partial Class NewStudent
     Private Sub InitializeComponent()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Entr = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.MedExemption = New System.Windows.Forms.CheckBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Gender = New System.Windows.Forms.ComboBox()
+        Me.House = New System.Windows.Forms.ComboBox()
+        Me.Year = New System.Windows.Forms.ComboBox()
+        Me.Surname = New System.Windows.Forms.TextBox()
+        Me.PreferredName = New System.Windows.Forms.TextBox()
+        Me.studentID = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Button3
@@ -61,15 +60,15 @@ Partial Class NewStudent
         Me.Button2.Text = "Cancel"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Button1
+        'Entr
         '
-        Me.Button1.Location = New System.Drawing.Point(145, 147)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(56, 19)
-        Me.Button1.TabIndex = 31
-        Me.Button1.Text = "Submit"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Entr.Location = New System.Drawing.Point(145, 147)
+        Me.Entr.Margin = New System.Windows.Forms.Padding(2)
+        Me.Entr.Name = "Entr"
+        Me.Entr.Size = New System.Drawing.Size(56, 19)
+        Me.Entr.TabIndex = 31
+        Me.Entr.Text = "Submit"
+        Me.Entr.UseVisualStyleBackColor = True
         '
         'Label6
         '
@@ -101,27 +100,16 @@ Partial Class NewStudent
         Me.Label4.TabIndex = 28
         Me.Label4.Text = "Year Level"
         '
-        'CheckBox2
+        'MedExemption
         '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(120, 125)
-        Me.CheckBox2.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(84, 17)
-        Me.CheckBox2.TabIndex = 27
-        Me.CheckBox2.Text = "Assign Lock"
-        Me.CheckBox2.UseVisualStyleBackColor = True
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(20, 125)
-        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(93, 17)
-        Me.CheckBox1.TabIndex = 26
-        Me.CheckBox1.Text = "Assign Locker"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.MedExemption.AutoSize = True
+        Me.MedExemption.Location = New System.Drawing.Point(11, 126)
+        Me.MedExemption.Margin = New System.Windows.Forms.Padding(2)
+        Me.MedExemption.Name = "MedExemption"
+        Me.MedExemption.Size = New System.Drawing.Size(115, 17)
+        Me.MedExemption.TabIndex = 26
+        Me.MedExemption.Text = "Medical Exemption"
+        Me.MedExemption.UseVisualStyleBackColor = True
         '
         'Label3
         '
@@ -153,59 +141,59 @@ Partial Class NewStudent
         Me.Label1.TabIndex = 23
         Me.Label1.Text = "Student ID"
         '
-        'ComboBox3
+        'Gender
         '
-        Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Items.AddRange(New Object() {"Male", "Female"})
-        Me.ComboBox3.Location = New System.Drawing.Point(111, 101)
-        Me.ComboBox3.Margin = New System.Windows.Forms.Padding(2)
-        Me.ComboBox3.Name = "ComboBox3"
-        Me.ComboBox3.Size = New System.Drawing.Size(92, 21)
-        Me.ComboBox3.TabIndex = 22
+        Me.Gender.FormattingEnabled = True
+        Me.Gender.Items.AddRange(New Object() {"Male", "Female"})
+        Me.Gender.Location = New System.Drawing.Point(111, 101)
+        Me.Gender.Margin = New System.Windows.Forms.Padding(2)
+        Me.Gender.Name = "Gender"
+        Me.Gender.Size = New System.Drawing.Size(92, 21)
+        Me.Gender.TabIndex = 22
         '
-        'ComboBox2
+        'House
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {"SMITH", "MORRIS", "LANE", "GIBBS"})
-        Me.ComboBox2.Location = New System.Drawing.Point(111, 61)
-        Me.ComboBox2.Margin = New System.Windows.Forms.Padding(2)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(92, 21)
-        Me.ComboBox2.TabIndex = 21
+        Me.House.FormattingEnabled = True
+        Me.House.Items.AddRange(New Object() {"SMITH", "MORRIS", "LANE", "GIBBS"})
+        Me.House.Location = New System.Drawing.Point(111, 61)
+        Me.House.Margin = New System.Windows.Forms.Padding(2)
+        Me.House.Name = "House"
+        Me.House.Size = New System.Drawing.Size(92, 21)
+        Me.House.TabIndex = 21
         '
-        'ComboBox1
+        'Year
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"10", "11", "12"})
-        Me.ComboBox1.Location = New System.Drawing.Point(111, 21)
-        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(92, 21)
-        Me.ComboBox1.TabIndex = 20
+        Me.Year.FormattingEnabled = True
+        Me.Year.Items.AddRange(New Object() {"10", "11", "12"})
+        Me.Year.Location = New System.Drawing.Point(111, 21)
+        Me.Year.Margin = New System.Windows.Forms.Padding(2)
+        Me.Year.Name = "Year"
+        Me.Year.Size = New System.Drawing.Size(92, 21)
+        Me.Year.TabIndex = 20
         '
-        'TextBox3
+        'Surname
         '
-        Me.TextBox3.Location = New System.Drawing.Point(11, 102)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(96, 20)
-        Me.TextBox3.TabIndex = 19
+        Me.Surname.Location = New System.Drawing.Point(11, 102)
+        Me.Surname.Margin = New System.Windows.Forms.Padding(2)
+        Me.Surname.Name = "Surname"
+        Me.Surname.Size = New System.Drawing.Size(96, 20)
+        Me.Surname.TabIndex = 19
         '
-        'TextBox2
+        'PreferredName
         '
-        Me.TextBox2.Location = New System.Drawing.Point(11, 63)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(96, 20)
-        Me.TextBox2.TabIndex = 18
+        Me.PreferredName.Location = New System.Drawing.Point(11, 63)
+        Me.PreferredName.Margin = New System.Windows.Forms.Padding(2)
+        Me.PreferredName.Name = "PreferredName"
+        Me.PreferredName.Size = New System.Drawing.Size(96, 20)
+        Me.PreferredName.TabIndex = 18
         '
-        'TextBox1
+        'studentID
         '
-        Me.TextBox1.Location = New System.Drawing.Point(11, 23)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(96, 20)
-        Me.TextBox1.TabIndex = 17
+        Me.studentID.Location = New System.Drawing.Point(11, 23)
+        Me.studentID.Margin = New System.Windows.Forms.Padding(2)
+        Me.studentID.Name = "studentID"
+        Me.studentID.Size = New System.Drawing.Size(96, 20)
+        Me.studentID.TabIndex = 17
         '
         'NewStudent
         '
@@ -214,21 +202,20 @@ Partial Class NewStudent
         Me.ClientSize = New System.Drawing.Size(214, 171)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Entr)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.CheckBox2)
-        Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(Me.MedExemption)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.ComboBox3)
-        Me.Controls.Add(Me.ComboBox2)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Gender)
+        Me.Controls.Add(Me.House)
+        Me.Controls.Add(Me.Year)
+        Me.Controls.Add(Me.Surname)
+        Me.Controls.Add(Me.PreferredName)
+        Me.Controls.Add(Me.studentID)
         Me.Name = "NewStudent"
         Me.Text = "NewStudent"
         Me.ResumeLayout(False)
@@ -238,19 +225,18 @@ Partial Class NewStudent
 
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents Entr As Button
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents CheckBox2 As CheckBox
-    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents MedExemption As CheckBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents ComboBox3 As ComboBox
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Gender As ComboBox
+    Friend WithEvents House As ComboBox
+    Friend WithEvents Year As ComboBox
+    Friend WithEvents Surname As TextBox
+    Friend WithEvents PreferredName As TextBox
+    Friend WithEvents studentID As TextBox
 End Class

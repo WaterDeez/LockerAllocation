@@ -393,7 +393,7 @@ Partial Class LockerLookup
         Me.txtFilter.Size = New System.Drawing.Size(177, 20)
         Me.txtFilter.TabIndex = 42
         '
-        'Lockerlookup
+        'LockerLookup
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -431,7 +431,7 @@ Partial Class LockerLookup
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.lbUsers)
         Me.Controls.Add(Me.txtFilter)
-        Me.Name = "Lockerlookup"
+        Me.Name = "LockerLookup"
         Me.Text = "Lockerlookup"
         Me.ResumeLayout(False)
         Me.PerformLayout()

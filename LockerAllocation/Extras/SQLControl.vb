@@ -14,6 +14,9 @@ Public Class SQLControl
     Public RecordCount As Integer
     Public Exception As String
 
+    Public Sub New()
+    End Sub
+
     ' EXECUTE QUERY SUB
     Public Sub ExecQuery(Query As String)
         ' RESET QUERY STATS
@@ -40,7 +43,7 @@ Public Class SQLControl
             DBDT = New DataTable
             DBDA = New SqlDataAdapter(DBCmd)
             'DBDS = New DataSet
-            DBDA.Fill(DBDT)
+            'DBDA.Fill(DBDT)
             RecordCount = DBDA.Fill(DBDT)
         Catch ex As Exception
             ' CAPTURE ERROR

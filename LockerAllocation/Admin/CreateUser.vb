@@ -4,7 +4,6 @@ Public Class CreateUser
     Public isAdmin As String = "0"
     Public doEncrypt As Boolean = True
     Private Sub InsertUser()
-        MsgBox("Insertuser")
         'Use EasyEncrption library to store password with SHA256bit encryption if required
         Dim password
         If doEncrypt = True Then

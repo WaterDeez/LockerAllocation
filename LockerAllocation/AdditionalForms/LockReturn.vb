@@ -1,14 +1,14 @@
 ﻿Public Class LockReturn
     Public selection As New Selections()
     Public sql As New SQLControl()
-    Private load As Boolean
+    Private loading As Boolean
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
     End Sub
 
     Private Sub LockReturn_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         selection.LoadStudents(ComboBox1)
-        load = True
+        loading = True
     End Sub
 
     Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectionChangeCommitted
