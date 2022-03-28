@@ -5,7 +5,7 @@
         cmbox.Items.Clear()
 
         ' RUN QUERY
-        SQL.ExecQuery("SELECT DISTINCT *, (Surname + ', ' + PreferredNames) AS StudentName FROM StudentDetails ORDER BY Surname")
+        SQL.ExecQuery("SELECT DISTINCT *, (Surname + ', ' + PreferredNames) AS StudentName FROM StudentDetails ORDER BY Surname;")
 
         If SQL.HasException(True) Then Exit Sub
 

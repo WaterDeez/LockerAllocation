@@ -43,7 +43,6 @@ Public Class SQLControl
             DBDT = New DataTable
             DBDA = New SqlDataAdapter(DBCmd)
             'DBDS = New DataSet
-            'DBDA.Fill(DBDT)
             RecordCount = DBDA.Fill(DBDT)
         Catch ex As Exception
             ' CAPTURE ERROR

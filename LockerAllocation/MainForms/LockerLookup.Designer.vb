@@ -27,39 +27,40 @@ Partial Class LockerLookup
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.CheckBox4 = New System.Windows.Forms.CheckBox()
+        Me.ActiveLock = New System.Windows.Forms.CheckBox()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.DateAdded = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
+        Me.Combination3 = New System.Windows.Forms.TextBox()
+        Me.Combination2 = New System.Windows.Forms.TextBox()
+        Me.Combination1 = New System.Windows.Forms.TextBox()
+        Me.LockReturned = New System.Windows.Forms.CheckBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.AllocatedLocks = New System.Windows.Forms.ComboBox()
+        Me.MedicalExemption = New System.Windows.Forms.CheckBox()
+        Me.CurrentStudent = New System.Windows.Forms.CheckBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.lbUsers = New System.Windows.Forms.ListBox()
+        Me.House = New System.Windows.Forms.TextBox()
+        Me.Gender = New System.Windows.Forms.TextBox()
+        Me.Grade = New System.Windows.Forms.TextBox()
+        Me.AllocationDate = New System.Windows.Forms.TextBox()
+        Me.StudentID = New System.Windows.Forms.TextBox()
+        Me.AllocatedStudents = New System.Windows.Forms.ComboBox()
+        Me.lbLockers = New System.Windows.Forms.ListBox()
         Me.txtFilter = New System.Windows.Forms.TextBox()
+        Me.FunctionalLock = New System.Windows.Forms.CheckBox()
+        Me.AllocationID = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(214, 246)
+        Me.Button5.Location = New System.Drawing.Point(214, 253)
         Me.Button5.Margin = New System.Windows.Forms.Padding(2)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(78, 27)
@@ -79,7 +80,7 @@ Partial Class LockerLookup
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(393, 233)
+        Me.Button3.Location = New System.Drawing.Point(393, 210)
         Me.Button3.Margin = New System.Windows.Forms.Padding(2)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(78, 27)
@@ -99,7 +100,7 @@ Partial Class LockerLookup
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(393, 201)
+        Me.Button1.Location = New System.Drawing.Point(393, 178)
         Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(78, 27)
@@ -107,111 +108,91 @@ Partial Class LockerLookup
         Me.Button1.Text = "Lock Return"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'CheckBox4
+        'ActiveLock
         '
-        Me.CheckBox4.AutoSize = True
-        Me.CheckBox4.Enabled = False
-        Me.CheckBox4.Location = New System.Drawing.Point(393, 179)
-        Me.CheckBox4.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox4.Name = "CheckBox4"
-        Me.CheckBox4.Size = New System.Drawing.Size(127, 17)
-        Me.CheckBox4.TabIndex = 69
-        Me.CheckBox4.TabStop = False
-        Me.CheckBox4.Text = "Currently Active Lock"
-        Me.CheckBox4.UseVisualStyleBackColor = True
+        Me.ActiveLock.AutoSize = True
+        Me.ActiveLock.Enabled = False
+        Me.ActiveLock.Location = New System.Drawing.Point(393, 136)
+        Me.ActiveLock.Margin = New System.Windows.Forms.Padding(2)
+        Me.ActiveLock.Name = "ActiveLock"
+        Me.ActiveLock.Size = New System.Drawing.Size(127, 17)
+        Me.ActiveLock.TabIndex = 69
+        Me.ActiveLock.TabStop = False
+        Me.ActiveLock.Text = "Currently Active Lock"
+        Me.ActiveLock.UseVisualStyleBackColor = True
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(393, 140)
+        Me.Label10.Location = New System.Drawing.Point(393, 97)
         Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(64, 13)
         Me.Label10.TabIndex = 68
         Me.Label10.Text = "Date Added"
         '
-        'TextBox10
+        'DateAdded
         '
-        Me.TextBox10.Location = New System.Drawing.Point(393, 156)
-        Me.TextBox10.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.ReadOnly = True
-        Me.TextBox10.Size = New System.Drawing.Size(156, 20)
-        Me.TextBox10.TabIndex = 67
-        Me.TextBox10.TabStop = False
+        Me.DateAdded.Location = New System.Drawing.Point(393, 113)
+        Me.DateAdded.Margin = New System.Windows.Forms.Padding(2)
+        Me.DateAdded.Name = "DateAdded"
+        Me.DateAdded.ReadOnly = True
+        Me.DateAdded.Size = New System.Drawing.Size(156, 20)
+        Me.DateAdded.TabIndex = 67
+        Me.DateAdded.TabStop = False
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(393, 98)
+        Me.Label9.Location = New System.Drawing.Point(390, 59)
         Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(92, 13)
         Me.Label9.TabIndex = 66
         Me.Label9.Text = "Lock Combination"
         '
-        'Label8
+        'Combination3
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(393, 57)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(73, 13)
-        Me.Label8.TabIndex = 65
-        Me.Label8.Text = "Serial Number"
+        Me.Combination3.Location = New System.Drawing.Point(499, 74)
+        Me.Combination3.Margin = New System.Windows.Forms.Padding(2)
+        Me.Combination3.Name = "Combination3"
+        Me.Combination3.ReadOnly = True
+        Me.Combination3.Size = New System.Drawing.Size(50, 20)
+        Me.Combination3.TabIndex = 64
+        Me.Combination3.TabStop = False
         '
-        'TextBox9
+        'Combination2
         '
-        Me.TextBox9.Location = New System.Drawing.Point(499, 117)
-        Me.TextBox9.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.ReadOnly = True
-        Me.TextBox9.Size = New System.Drawing.Size(50, 20)
-        Me.TextBox9.TabIndex = 64
-        Me.TextBox9.TabStop = False
+        Me.Combination2.Location = New System.Drawing.Point(446, 74)
+        Me.Combination2.Margin = New System.Windows.Forms.Padding(2)
+        Me.Combination2.Name = "Combination2"
+        Me.Combination2.ReadOnly = True
+        Me.Combination2.Size = New System.Drawing.Size(50, 20)
+        Me.Combination2.TabIndex = 63
+        Me.Combination2.TabStop = False
         '
-        'TextBox8
+        'Combination1
         '
-        Me.TextBox8.Location = New System.Drawing.Point(446, 117)
-        Me.TextBox8.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.ReadOnly = True
-        Me.TextBox8.Size = New System.Drawing.Size(50, 20)
-        Me.TextBox8.TabIndex = 63
-        Me.TextBox8.TabStop = False
+        Me.Combination1.Location = New System.Drawing.Point(393, 74)
+        Me.Combination1.Margin = New System.Windows.Forms.Padding(2)
+        Me.Combination1.Name = "Combination1"
+        Me.Combination1.ReadOnly = True
+        Me.Combination1.Size = New System.Drawing.Size(50, 20)
+        Me.Combination1.TabIndex = 62
+        Me.Combination1.TabStop = False
         '
-        'TextBox7
+        'LockReturned
         '
-        Me.TextBox7.Location = New System.Drawing.Point(393, 117)
-        Me.TextBox7.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.ReadOnly = True
-        Me.TextBox7.Size = New System.Drawing.Size(50, 20)
-        Me.TextBox7.TabIndex = 62
-        Me.TextBox7.TabStop = False
-        '
-        'TextBox6
-        '
-        Me.TextBox6.Location = New System.Drawing.Point(393, 74)
-        Me.TextBox6.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.ReadOnly = True
-        Me.TextBox6.Size = New System.Drawing.Size(156, 20)
-        Me.TextBox6.TabIndex = 61
-        Me.TextBox6.TabStop = False
-        '
-        'CheckBox3
-        '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Enabled = False
-        Me.CheckBox3.Location = New System.Drawing.Point(214, 224)
-        Me.CheckBox3.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(97, 17)
-        Me.CheckBox3.TabIndex = 60
-        Me.CheckBox3.TabStop = False
-        Me.CheckBox3.Text = "Lock Returned"
-        Me.CheckBox3.UseVisualStyleBackColor = True
+        Me.LockReturned.AutoSize = True
+        Me.LockReturned.Enabled = False
+        Me.LockReturned.Location = New System.Drawing.Point(214, 231)
+        Me.LockReturned.Margin = New System.Windows.Forms.Padding(2)
+        Me.LockReturned.Name = "LockReturned"
+        Me.LockReturned.Size = New System.Drawing.Size(97, 17)
+        Me.LockReturned.TabIndex = 60
+        Me.LockReturned.TabStop = False
+        Me.LockReturned.Text = "Lock Returned"
+        Me.LockReturned.UseVisualStyleBackColor = True
         '
         'Label7
         '
@@ -223,45 +204,45 @@ Partial Class LockerLookup
         Me.Label7.TabIndex = 59
         Me.Label7.Text = "Allocated Lock(s)"
         '
-        'ComboBox2
+        'AllocatedLocks
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(393, 33)
-        Me.ComboBox2.Margin = New System.Windows.Forms.Padding(2)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(156, 21)
-        Me.ComboBox2.TabIndex = 58
+        Me.AllocatedLocks.FormattingEnabled = True
+        Me.AllocatedLocks.Location = New System.Drawing.Point(393, 33)
+        Me.AllocatedLocks.Margin = New System.Windows.Forms.Padding(2)
+        Me.AllocatedLocks.Name = "AllocatedLocks"
+        Me.AllocatedLocks.Size = New System.Drawing.Size(156, 21)
+        Me.AllocatedLocks.TabIndex = 58
         '
-        'CheckBox2
+        'MedicalExemption
         '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Enabled = False
-        Me.CheckBox2.Location = New System.Drawing.Point(214, 201)
-        Me.CheckBox2.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(115, 17)
-        Me.CheckBox2.TabIndex = 57
-        Me.CheckBox2.TabStop = False
-        Me.CheckBox2.Text = "Medical Exemption"
-        Me.CheckBox2.UseVisualStyleBackColor = True
+        Me.MedicalExemption.AutoSize = True
+        Me.MedicalExemption.Enabled = False
+        Me.MedicalExemption.Location = New System.Drawing.Point(214, 208)
+        Me.MedicalExemption.Margin = New System.Windows.Forms.Padding(2)
+        Me.MedicalExemption.Name = "MedicalExemption"
+        Me.MedicalExemption.Size = New System.Drawing.Size(115, 17)
+        Me.MedicalExemption.TabIndex = 57
+        Me.MedicalExemption.TabStop = False
+        Me.MedicalExemption.Text = "Medical Exemption"
+        Me.MedicalExemption.UseVisualStyleBackColor = True
         '
-        'CheckBox1
+        'CurrentStudent
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Enabled = False
-        Me.CheckBox1.Location = New System.Drawing.Point(214, 179)
-        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(100, 17)
-        Me.CheckBox1.TabIndex = 56
-        Me.CheckBox1.TabStop = False
-        Me.CheckBox1.Text = "Current Student"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.CurrentStudent.AutoSize = True
+        Me.CurrentStudent.Enabled = False
+        Me.CurrentStudent.Location = New System.Drawing.Point(214, 186)
+        Me.CurrentStudent.Margin = New System.Windows.Forms.Padding(2)
+        Me.CurrentStudent.Name = "CurrentStudent"
+        Me.CurrentStudent.Size = New System.Drawing.Size(100, 17)
+        Me.CurrentStudent.TabIndex = 56
+        Me.CurrentStudent.TabStop = False
+        Me.CurrentStudent.Text = "Current Student"
+        Me.CurrentStudent.UseVisualStyleBackColor = True
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(295, 139)
+        Me.Label6.Location = New System.Drawing.Point(333, 141)
         Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(36, 13)
@@ -281,7 +262,7 @@ Partial Class LockerLookup
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(295, 57)
+        Me.Label4.Location = New System.Drawing.Point(276, 139)
         Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(42, 13)
@@ -291,12 +272,12 @@ Partial Class LockerLookup
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(214, 98)
+        Me.Label3.Location = New System.Drawing.Point(214, 102)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(54, 13)
+        Me.Label3.Size = New System.Drawing.Size(79, 13)
         Me.Label3.TabIndex = 52
-        Me.Label3.Text = "Full Name"
+        Me.Label3.Text = "Allocation Date"
         '
         'Label2
         '
@@ -318,72 +299,72 @@ Partial Class LockerLookup
         Me.Label1.TabIndex = 50
         Me.Label1.Text = "Allocated Student(s)"
         '
-        'TextBox5
+        'House
         '
-        Me.TextBox5.Location = New System.Drawing.Point(214, 156)
-        Me.TextBox5.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.ReadOnly = True
-        Me.TextBox5.Size = New System.Drawing.Size(76, 20)
-        Me.TextBox5.TabIndex = 49
-        Me.TextBox5.TabStop = False
+        Me.House.Location = New System.Drawing.Point(214, 156)
+        Me.House.Margin = New System.Windows.Forms.Padding(2)
+        Me.House.Name = "House"
+        Me.House.ReadOnly = True
+        Me.House.Size = New System.Drawing.Size(58, 20)
+        Me.House.TabIndex = 49
+        Me.House.TabStop = False
         '
-        'TextBox4
+        'Gender
         '
-        Me.TextBox4.Location = New System.Drawing.Point(295, 74)
-        Me.TextBox4.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.ReadOnly = True
-        Me.TextBox4.Size = New System.Drawing.Size(76, 20)
-        Me.TextBox4.TabIndex = 48
-        Me.TextBox4.TabStop = False
+        Me.Gender.Location = New System.Drawing.Point(276, 156)
+        Me.Gender.Margin = New System.Windows.Forms.Padding(2)
+        Me.Gender.Name = "Gender"
+        Me.Gender.ReadOnly = True
+        Me.Gender.Size = New System.Drawing.Size(53, 20)
+        Me.Gender.TabIndex = 48
+        Me.Gender.TabStop = False
         '
-        'TextBox3
+        'Grade
         '
-        Me.TextBox3.Location = New System.Drawing.Point(295, 156)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.ReadOnly = True
-        Me.TextBox3.Size = New System.Drawing.Size(76, 20)
-        Me.TextBox3.TabIndex = 47
-        Me.TextBox3.TabStop = False
+        Me.Grade.Location = New System.Drawing.Point(333, 156)
+        Me.Grade.Margin = New System.Windows.Forms.Padding(2)
+        Me.Grade.Name = "Grade"
+        Me.Grade.ReadOnly = True
+        Me.Grade.Size = New System.Drawing.Size(39, 20)
+        Me.Grade.TabIndex = 47
+        Me.Grade.TabStop = False
         '
-        'TextBox2
+        'AllocationDate
         '
-        Me.TextBox2.Location = New System.Drawing.Point(214, 117)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(158, 20)
-        Me.TextBox2.TabIndex = 46
-        Me.TextBox2.TabStop = False
+        Me.AllocationDate.Location = New System.Drawing.Point(214, 117)
+        Me.AllocationDate.Margin = New System.Windows.Forms.Padding(2)
+        Me.AllocationDate.Name = "AllocationDate"
+        Me.AllocationDate.ReadOnly = True
+        Me.AllocationDate.Size = New System.Drawing.Size(158, 20)
+        Me.AllocationDate.TabIndex = 46
+        Me.AllocationDate.TabStop = False
         '
-        'TextBox1
+        'StudentID
         '
-        Me.TextBox1.Location = New System.Drawing.Point(214, 74)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(76, 20)
-        Me.TextBox1.TabIndex = 45
-        Me.TextBox1.TabStop = False
+        Me.StudentID.Location = New System.Drawing.Point(214, 74)
+        Me.StudentID.Margin = New System.Windows.Forms.Padding(2)
+        Me.StudentID.Name = "StudentID"
+        Me.StudentID.ReadOnly = True
+        Me.StudentID.Size = New System.Drawing.Size(76, 20)
+        Me.StudentID.TabIndex = 45
+        Me.StudentID.TabStop = False
         '
-        'ComboBox1
+        'AllocatedStudents
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(214, 33)
-        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(2)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(158, 21)
-        Me.ComboBox1.TabIndex = 44
+        Me.AllocatedStudents.FormattingEnabled = True
+        Me.AllocatedStudents.Location = New System.Drawing.Point(214, 33)
+        Me.AllocatedStudents.Margin = New System.Windows.Forms.Padding(2)
+        Me.AllocatedStudents.Name = "AllocatedStudents"
+        Me.AllocatedStudents.Size = New System.Drawing.Size(158, 21)
+        Me.AllocatedStudents.TabIndex = 44
         '
-        'lbUsers
+        'lbLockers
         '
-        Me.lbUsers.FormattingEnabled = True
-        Me.lbUsers.Location = New System.Drawing.Point(12, 33)
-        Me.lbUsers.Name = "lbUsers"
-        Me.lbUsers.Size = New System.Drawing.Size(177, 329)
-        Me.lbUsers.TabIndex = 43
+        Me.lbLockers.FormattingEnabled = True
+        Me.lbLockers.Location = New System.Drawing.Point(12, 33)
+        Me.lbLockers.Name = "lbLockers"
+        Me.lbLockers.Size = New System.Drawing.Size(177, 329)
+        Me.lbLockers.TabIndex = 43
         '
         'txtFilter
         '
@@ -393,43 +374,77 @@ Partial Class LockerLookup
         Me.txtFilter.Size = New System.Drawing.Size(177, 20)
         Me.txtFilter.TabIndex = 42
         '
+        'FunctionalLock
+        '
+        Me.FunctionalLock.AutoSize = True
+        Me.FunctionalLock.Enabled = False
+        Me.FunctionalLock.Location = New System.Drawing.Point(393, 157)
+        Me.FunctionalLock.Margin = New System.Windows.Forms.Padding(2)
+        Me.FunctionalLock.Name = "FunctionalLock"
+        Me.FunctionalLock.Size = New System.Drawing.Size(102, 17)
+        Me.FunctionalLock.TabIndex = 75
+        Me.FunctionalLock.TabStop = False
+        Me.FunctionalLock.Text = "Functional Lock"
+        Me.FunctionalLock.UseVisualStyleBackColor = True
+        '
+        'AllocationID
+        '
+        Me.AllocationID.Location = New System.Drawing.Point(294, 74)
+        Me.AllocationID.Margin = New System.Windows.Forms.Padding(2)
+        Me.AllocationID.Name = "AllocationID"
+        Me.AllocationID.ReadOnly = True
+        Me.AllocationID.Size = New System.Drawing.Size(78, 20)
+        Me.AllocationID.TabIndex = 76
+        Me.AllocationID.TabStop = False
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(291, 58)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(67, 13)
+        Me.Label11.TabIndex = 77
+        Me.Label11.Text = "Allocation ID"
+        '
         'LockerLookup
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(560, 378)
+        Me.ClientSize = New System.Drawing.Size(562, 365)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.AllocationID)
+        Me.Controls.Add(Me.FunctionalLock)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.CheckBox4)
+        Me.Controls.Add(Me.ActiveLock)
         Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.TextBox10)
+        Me.Controls.Add(Me.DateAdded)
         Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.TextBox9)
-        Me.Controls.Add(Me.TextBox8)
-        Me.Controls.Add(Me.TextBox7)
-        Me.Controls.Add(Me.TextBox6)
-        Me.Controls.Add(Me.CheckBox3)
+        Me.Controls.Add(Me.Combination3)
+        Me.Controls.Add(Me.Combination2)
+        Me.Controls.Add(Me.Combination1)
+        Me.Controls.Add(Me.LockReturned)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.ComboBox2)
-        Me.Controls.Add(Me.CheckBox2)
-        Me.Controls.Add(Me.CheckBox1)
+        Me.Controls.Add(Me.AllocatedLocks)
+        Me.Controls.Add(Me.MedicalExemption)
+        Me.Controls.Add(Me.CurrentStudent)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.lbUsers)
+        Me.Controls.Add(Me.House)
+        Me.Controls.Add(Me.Gender)
+        Me.Controls.Add(Me.Grade)
+        Me.Controls.Add(Me.AllocationDate)
+        Me.Controls.Add(Me.StudentID)
+        Me.Controls.Add(Me.AllocatedStudents)
+        Me.Controls.Add(Me.lbLockers)
         Me.Controls.Add(Me.txtFilter)
         Me.Name = "LockerLookup"
         Me.Text = "Lockerlookup"
@@ -443,32 +458,33 @@ Partial Class LockerLookup
     Friend WithEvents Button3 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
-    Friend WithEvents CheckBox4 As CheckBox
+    Friend WithEvents ActiveLock As CheckBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents TextBox10 As TextBox
+    Friend WithEvents DateAdded As TextBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox9 As TextBox
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents CheckBox3 As CheckBox
+    Friend WithEvents Combination3 As TextBox
+    Friend WithEvents Combination2 As TextBox
+    Friend WithEvents Combination1 As TextBox
+    Friend WithEvents LockReturned As CheckBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents CheckBox2 As CheckBox
-    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents AllocatedLocks As ComboBox
+    Friend WithEvents MedicalExemption As CheckBox
+    Friend WithEvents CurrentStudent As CheckBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents lbUsers As ListBox
+    Friend WithEvents House As TextBox
+    Friend WithEvents Gender As TextBox
+    Friend WithEvents Grade As TextBox
+    Friend WithEvents AllocationDate As TextBox
+    Friend WithEvents StudentID As TextBox
+    Friend WithEvents AllocatedStudents As ComboBox
+    Friend WithEvents lbLockers As ListBox
     Friend WithEvents txtFilter As TextBox
+    Friend WithEvents FunctionalLock As CheckBox
+    Friend WithEvents AllocationID As TextBox
+    Friend WithEvents Label11 As Label
 End Class

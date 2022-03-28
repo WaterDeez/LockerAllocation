@@ -15,12 +15,12 @@
         If ComboBox1.Text = Nothing Then Exit Sub
         sql.ExecQuery("SELECT * FROM Locks WHERE StudentID='" + ComboBox1.SelectedValue + "';")
         If sql.HasException(True) Then Exit Sub
-        If sql.DBDT Is DBNull.Value Then
+        If sql.DBDT.Rows.Count = 0 Then
             MsgBox("no lock assigned")
             Exit Sub
-        ElseIf sql.DBDT.Rows(0).Item("StudentID") >= 2 Then
+        ElseIf sql.DBDT.Rows.Count >= 2 Then
             MsgBox("More than one lock has been allocated to this student!")
-        ElseIf sql.DBDT.Rows(0).Item("StudentID") = 1 Then
+        ElseIf sql.DBDT.Rows.Count = 1 Then
             TextBox1.Text = sql.DBDT.Rows(0).Item("SerialNumber")
         Else
             MsgBox("Error!")

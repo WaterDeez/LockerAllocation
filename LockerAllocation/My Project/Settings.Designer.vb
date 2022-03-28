@@ -125,6 +125,17 @@ Namespace My
                 Me("SQLServerName") = value
             End Set
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=localhost\SQLEXPRESS;Initial Catalog=LockerAllocation;Integrated Secu"& _ 
+            "rity=True")>  _
+        Public ReadOnly Property LockerAllocationConnectionString() As String
+            Get
+                Return CType(Me("LockerAllocationConnectionString"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 
