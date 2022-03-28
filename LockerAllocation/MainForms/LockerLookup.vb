@@ -8,8 +8,7 @@
 
     Private Sub LockDetails()
         'retrieve all lock details about the selected lock
-        SQL.ExecQuery("SELECT * FROM Locks WHERE SerialNumber='" + AllocatedLocks.SelectedValue &
-            +"' AND StudentID='" + AllocatedStudents.SelectedValue + "';")
+        SQL.ExecQuery("SELECT * FROM Locks WHERE SerialNumber='" + AllocatedLocks.SelectedValue + "' AND StudentID='" + AllocatedStudents.SelectedValue + "';")
         DateAdded.Text = SQL.DBDT.Rows(0).Item("DateAdded")
 
         'determine if checkboxes should be checked or not
@@ -37,9 +36,7 @@
     Private Sub StudentDetails()
         'retrieve all lock details about the selected student
         SQL.ExecQuery("SELECT DISTINCT * FROM StudentDetails FULL JOIN " &
-                      "AllocatedLockers ON StudentDetails.StudentID=AllocatedLockers.StudentID " &
-                      "WHERE StudentDetails.StudentID='" + AllocatedStudents.SelectedValue &
-                      +"' ORDER BY AllocatedLockers.AllocationDate ASC;")
+                      "AllocatedLockers ON StudentDetails.StudentID=AllocatedLockers.StudentID WHERE StudentDetails.StudentID='" + AllocatedStudents.SelectedValue + "' ORDER BY AllocatedLockers.AllocationDate ASC;")
         'fill textboxes with retrieved data
         StudentID.Text = SQL.DBDT.Rows(0).Item("StudentID")
         AllocationID.Text = SQL.DBDT.Rows(0).Item("AllocationID")
@@ -69,8 +66,7 @@
     End Sub
     Private Sub FetchLocks()
         'SQL query to get locks of selected student
-        SQL.ExecQuery("SELECT DISTINCT * FROM Locks WHERE StudentID='" + AllocatedStudents.SelectedValue &
-            +"' ORDER BY DateAdded ASC;")
+        SQL.ExecQuery("SELECT DISTINCT * FROM Locks WHERE StudentID='" + AllocatedStudents.SelectedValue + "' ORDER BY DateAdded ASC;")
 
         'insert results into allocated locks combobox
         AllocatedLocks.DataSource = SQL.DBDT
