@@ -25,7 +25,6 @@ Partial Class admin
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(admin))
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
@@ -37,9 +36,10 @@ Partial Class admin
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pbDBAvatar = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbDBAvatar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label3
@@ -61,17 +61,6 @@ Partial Class admin
         Me.Label2.Size = New System.Drawing.Size(79, 13)
         Me.Label2.TabIndex = 26
         Me.Label2.Text = "Welcome back"
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(34, 146)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(75, 79)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox3.TabIndex = 25
-        Me.PictureBox3.TabStop = False
         '
         'Button5
         '
@@ -188,15 +177,26 @@ Partial Class admin
         Me.Button6.Text = "Switch User"
         Me.Button6.UseVisualStyleBackColor = True
         '
+        'pbDBAvatar
+        '
+        Me.pbDBAvatar.BackColor = System.Drawing.Color.LightGray
+        Me.pbDBAvatar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pbDBAvatar.Location = New System.Drawing.Point(34, 160)
+        Me.pbDBAvatar.Name = "pbDBAvatar"
+        Me.pbDBAvatar.Size = New System.Drawing.Size(75, 75)
+        Me.pbDBAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbDBAvatar.TabIndex = 29
+        Me.pbDBAvatar.TabStop = False
+        '
         'admin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(600, 366)
+        Me.Controls.Add(Me.pbDBAvatar)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Button8)
@@ -210,9 +210,9 @@ Partial Class admin
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "admin"
         Me.Text = "admin"
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbDBAvatar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -220,7 +220,6 @@ Partial Class admin
 
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Button5 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
@@ -232,4 +231,5 @@ Partial Class admin
     Friend WithEvents Button8 As Button
     Friend WithEvents Button7 As Button
     Friend WithEvents Button6 As Button
+    Friend WithEvents pbDBAvatar As PictureBox
 End Class

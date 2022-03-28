@@ -1,11 +1,7 @@
-﻿Public Class MainMenu
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
+﻿Imports System.IO
+Public Class MainMenu
+    Public Selections As New Selections()
 
-    End Sub
-
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles UsernameLbl.Click
-
-    End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs)
         login.Show()
@@ -31,6 +27,8 @@
     End Sub
 
     Private Sub MainMenu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Selections.DrawAvatar(pbDBAvatar)
+
         UsernameLbl.Text = username
         If adminAccount = True Then
             AdminLbl.Visible = True
@@ -38,6 +36,7 @@
             AdminLbl.Visible = False
         End If
     End Sub
+
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         NewLock.Show()

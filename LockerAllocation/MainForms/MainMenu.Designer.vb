@@ -32,14 +32,14 @@ Partial Class MainMenu
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.UsernameLbl = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.AdminLbl = New System.Windows.Forms.Label()
+        Me.pbDBAvatar = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbDBAvatar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -137,17 +137,6 @@ Partial Class MainMenu
         Me.Label1.TabIndex = 10
         Me.Label1.Text = "Locker Allocater"
         '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(31, 142)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(75, 79)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox3.TabIndex = 12
-        Me.PictureBox3.TabStop = False
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -189,16 +178,27 @@ Partial Class MainMenu
         Me.AdminLbl.Text = "You are an Admin!"
         Me.AdminLbl.Visible = False
         '
+        'pbDBAvatar
+        '
+        Me.pbDBAvatar.BackColor = System.Drawing.Color.LightGray
+        Me.pbDBAvatar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pbDBAvatar.Location = New System.Drawing.Point(31, 138)
+        Me.pbDBAvatar.Name = "pbDBAvatar"
+        Me.pbDBAvatar.Size = New System.Drawing.Size(75, 75)
+        Me.pbDBAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbDBAvatar.TabIndex = 27
+        Me.pbDBAvatar.TabStop = False
+        '
         'MainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(600, 366)
+        Me.Controls.Add(Me.pbDBAvatar)
         Me.Controls.Add(Me.AdminLbl)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.UsernameLbl)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Button8)
         Me.Controls.Add(Me.Button3)
@@ -213,7 +213,7 @@ Partial Class MainMenu
         Me.Text = "MainMenu"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbDBAvatar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -228,9 +228,9 @@ Partial Class MainMenu
     Friend WithEvents Button7 As Button
     Friend WithEvents Button8 As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Label2 As Label
     Friend WithEvents UsernameLbl As Label
     Friend WithEvents Button5 As Button
     Friend WithEvents AdminLbl As Label
+    Friend WithEvents pbDBAvatar As PictureBox
 End Class

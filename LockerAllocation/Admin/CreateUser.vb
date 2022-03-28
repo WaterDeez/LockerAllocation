@@ -1,8 +1,30 @@
 ﻿Imports EasyEncryption
+Imports System.IO
 Public Class CreateUser
     Public SQL As New SQLControl
     Public isAdmin As String = "0"
     Public doEncrypt As Boolean = True
+
+    Private Sub UploadImage(Path As String)
+        ' EXIT IF IMAGE NOT SELECTED
+        If String.IsNullOrEmpty(Path) Then Exit Sub
+
+        ' GET IMAGE DATA VIA MEMORY STREAM
+        Dim img As Image = Image.FromFile(Path)
+        Dim ms As New MemoryStream()
+        img.Save(ms, img.RawFormat)
+        Dim buffer As Byte() = ms.GetBuffer()
+
+        ' ADD SQL PARAMETERS
+        SQL.AddParam("@image", buffer)
+
+        ' RUN INSERT COMMAND
+        SQL.ExecQuery("UPDATE Users Set Avatar=@image WHERE UserName='" + txtUser.Text + "';")
+
+
+        ' REPORT ERRORS
+        If Not String.IsNullOrEmpty(SQL.Exception) Then MsgBox(SQL.Exception)
+    End Sub
     Private Sub InsertUser()
         'Use EasyEncrption library to store password with SHA256bit encryption if required
         Dim password
@@ -20,6 +42,7 @@ Public Class CreateUser
         SQL.ExecQuery("INSERT INTO Users (UserName,Password,Admin,Created) VALUES (@user,@password,@admin,GETDATE());")
         'Report & Abort on SQL Errors
         If SQL.HasException(True) Then Exit Sub
+        UploadImage(txtImagePath.Text)
         MsgBox("User created succesfully!")
         'Clear Signup Textbox Fields
         txtPass.Clear()
@@ -43,6 +66,14 @@ Public Class CreateUser
         SQL.DBDT.Clear() 'Flush data again 
         Return False 'Make boolean false
     End Function
+    Private Sub ofdBrowse_FileOk(sender As System.Object, e As System.ComponentModel.CancelEventArgs) Handles OFDBrowse.FileOk
+        Try
+            pbPreview.Image = Image.FromFile(OFDBrowse.FileName)
+            txtImagePath.Text = OFDBrowse.FileName
+        Catch ex As Exception
+
+        End Try
+    End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Enterbtn.Click
         'make sure passwords are matching for data validity
         If txtPass.Text = txtPass2.Text Then
@@ -90,6 +121,10 @@ Public Class CreateUser
     End Sub
 
     Private Sub CreateUser_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ofdBrowse.InitialDirectory = Application.StartupPath
+    End Sub
 
+    Private Sub cmdBrowse_Click(sender As Object, e As EventArgs) Handles cmdBrowse.Click
+        ofdBrowse.ShowDialog()
     End Sub
 End Class

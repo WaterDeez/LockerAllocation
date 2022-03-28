@@ -1,4 +1,5 @@
 ﻿Public Class admin
+    Public Selections As New Selections()
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
 
     End Sub
@@ -39,6 +40,7 @@
     End Sub
 
     Private Sub admin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Selections.DrawAvatar(pbDBAvatar)
         Label3.Text = username
     End Sub
 End Class
