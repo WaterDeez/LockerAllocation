@@ -26,7 +26,6 @@ Partial Class AdditionalMenu
         Me.Button5 = New System.Windows.Forms.Button()
         Me.UsernameLbl = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -36,9 +35,10 @@ Partial Class AdditionalMenu
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pbDBAvatar = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbDBAvatar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button5
@@ -70,17 +70,6 @@ Partial Class AdditionalMenu
         Me.Label2.Size = New System.Drawing.Size(79, 13)
         Me.Label2.TabIndex = 37
         Me.Label2.Text = "Welcome back"
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(35, 146)
-        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(75, 79)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox3.TabIndex = 36
-        Me.PictureBox3.TabStop = False
         '
         'Button7
         '
@@ -173,19 +162,30 @@ Partial Class AdditionalMenu
         Me.Label1.Location = New System.Drawing.Point(80, 20)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(447, 78)
+        Me.Label1.Size = New System.Drawing.Size(449, 78)
         Me.Label1.TabIndex = 35
-        Me.Label1.Text = "Locker Allocater"
+        Me.Label1.Text = "Locker Allocator"
+        '
+        'pbDBAvatar
+        '
+        Me.pbDBAvatar.BackColor = System.Drawing.Color.LightGray
+        Me.pbDBAvatar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.pbDBAvatar.Location = New System.Drawing.Point(35, 148)
+        Me.pbDBAvatar.Name = "pbDBAvatar"
+        Me.pbDBAvatar.Size = New System.Drawing.Size(75, 75)
+        Me.pbDBAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbDBAvatar.TabIndex = 40
+        Me.pbDBAvatar.TabStop = False
         '
         'AdditionalMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(600, 366)
+        Me.Controls.Add(Me.pbDBAvatar)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.UsernameLbl)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Button8)
         Me.Controls.Add(Me.Button3)
@@ -197,9 +197,9 @@ Partial Class AdditionalMenu
         Me.Controls.Add(Me.Label1)
         Me.Name = "AdditionalMenu"
         Me.Text = "AdditionalMenu"
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbDBAvatar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -207,7 +207,6 @@ Partial Class AdditionalMenu
     Friend WithEvents Button5 As Button
     Friend WithEvents UsernameLbl As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents Button7 As Button
     Friend WithEvents Button8 As Button
     Friend WithEvents Button3 As Button
@@ -217,4 +216,5 @@ Partial Class AdditionalMenu
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents pbDBAvatar As PictureBox
 End Class

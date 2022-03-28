@@ -33,34 +33,38 @@ Partial Class AdminSQLQuery
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(12, 36)
+        Me.TextBox1.Location = New System.Drawing.Point(9, 29)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(237, 22)
+        Me.TextBox1.Size = New System.Drawing.Size(179, 20)
         Me.TextBox1.TabIndex = 0
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(174, 64)
+        Me.Button1.Location = New System.Drawing.Point(130, 52)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(56, 19)
         Me.Button1.TabIndex = 1
         Me.Button1.Text = "Enter"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(93, 64)
+        Me.Button2.Location = New System.Drawing.Point(70, 52)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.Size = New System.Drawing.Size(56, 19)
         Me.Button2.TabIndex = 2
         Me.Button2.Text = "Clear"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(12, 64)
+        Me.Button3.Location = New System.Drawing.Point(9, 52)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.Size = New System.Drawing.Size(56, 19)
         Me.Button3.TabIndex = 3
         Me.Button3.Text = "Cancel"
         Me.Button3.UseVisualStyleBackColor = True
@@ -68,9 +72,10 @@ Partial Class AdminSQLQuery
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(13, 13)
+        Me.Label1.Location = New System.Drawing.Point(10, 11)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(79, 17)
+        Me.Label1.Size = New System.Drawing.Size(59, 13)
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "SQL Query"
         '
@@ -79,25 +84,27 @@ Partial Class AdminSQLQuery
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 94)
+        Me.DataGridView1.Location = New System.Drawing.Point(9, 76)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersWidth = 51
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(240, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(180, 122)
         Me.DataGridView1.TabIndex = 5
         '
         'AdminSQLQuery
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(196, 204)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBox1)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "AdminSQLQuery"

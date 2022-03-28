@@ -43,8 +43,6 @@
         If temp = 0 Then
             MsgBox("Item not found")
         End If
-        'SQL.AddParam("@item", "%" & txtSearch.Text & "%")
-        'LoadGrid("SELECT * FROM " + SelectedTable + " WHERE " + dgvData.SelectedColumns.ToString + " LIKE @item;")
     End Sub
 
     Private Sub Inventory_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load

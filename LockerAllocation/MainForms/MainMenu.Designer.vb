@@ -133,9 +133,9 @@ Partial Class MainMenu
         Me.Label1.Location = New System.Drawing.Point(76, 16)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(447, 78)
+        Me.Label1.Size = New System.Drawing.Size(449, 78)
         Me.Label1.TabIndex = 10
-        Me.Label1.Text = "Locker Allocater"
+        Me.Label1.Text = "Locker Allocator"
         '
         'Label2
         '

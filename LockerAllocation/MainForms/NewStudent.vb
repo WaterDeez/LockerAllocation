@@ -14,7 +14,8 @@
             SQL.AddParam("@Medical", "0")
         End If
         'Insert into SQL Table
-        SQL.ExecQuery("INSERT INTO StudentDetails (StudentID,Surname,PreferredNames,YearLvl,Gender,House,MedicalExemption,CurrentStudent) VALUES (@StudentID,@Surname,@Name,@Year,@Gender,@House,@Medical,1);")
+        SQL.ExecQuery("INSERT INTO StudentDetails (StudentID,Surname,PreferredNames,YearLvl,Gender,House," &
+                      "MedicalExemption,CurrentStudent) VALUES (@StudentID,@Surname,@Name,@Year,@Gender,@House,@Medical,1);")
         'Report & Abort on SQL Errors
         If SQL.HasException(True) Then Exit Sub
         MsgBox("Student added succesfully!")
@@ -38,10 +39,15 @@
         SQL.DBDT.Clear() 'Flush data again 
         Return False 'Make boolean false
     End Function
-    Private Sub NewStudent_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+    Private Sub ClearInputs()
+        studentID.Text = ""
+        PreferredName.Text = ""
+        Surname.Text = ""
+        Year.Text = String.Empty
+        House.Text = String.Empty
+        Gender.Text = String.Empty
+        MedExemption.CheckState = CheckState.Unchecked
     End Sub
-
     Private Sub Entr_Click(sender As Object, e As EventArgs) Handles Entr.Click
         'function to check whether the studentID is already used in the database
         If studentIDInUse() = False Then
@@ -52,15 +58,13 @@
             MsgBox("StudentID is already in use")
         End If
     End Sub
-    Private Sub ClearInputs()
-        studentID.Text = ""
-        PreferredName.Text = ""
-        Surname.Text = ""
-        Year.Text = String.Empty
-        House.Text = String.Empty
-        Gender.Text = String.Empty
-        MedExemption.CheckState = CheckState.Unchecked
+
+    Private Sub NewStudent_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
+
+
+
     Private Sub txtFields_TextChanged(sender As System.Object, e As System.EventArgs) Handles studentID.TextChanged, PreferredName.TextChanged, Surname.TextChanged
         'Check if all of the text fields are NOT blank
         If Not String.IsNullOrWhiteSpace(studentID.Text) AndAlso Not String.IsNullOrWhiteSpace(PreferredName.Text) AndAlso Not String.IsNullOrWhiteSpace(Surname.Text) Then

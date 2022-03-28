@@ -447,7 +447,7 @@ Partial Class LockerLookup
         Me.Controls.Add(Me.lbLockers)
         Me.Controls.Add(Me.txtFilter)
         Me.Name = "LockerLookup"
-        Me.Text = "Lockerlookup"
+        Me.Text = "Locker lookup"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
